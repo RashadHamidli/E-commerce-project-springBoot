@@ -2,8 +2,12 @@ package com.company.dao.inter;
 
 import com.company.entity.User;
 
-public interface UserDAOinter {
+import java.util.Date;
+import java.util.List;
 
+public interface UserDAOinter {
+    public List<User> getAll(String name, String surname, String email, String phone, String address, Date birthdate);
+    public User findByEmail(String email);
 
     public User getById(int id);
 
